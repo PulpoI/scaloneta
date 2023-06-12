@@ -36,6 +36,40 @@ if(class_exists('acf')) {
       'parent_slug' => 'theme_settings',
     ));
 
+    acf_add_options_page(array(
+      'page_title' => 'Blocks',
+      'menu_title' => 'Blocks',
+      'menu_slug' => 'blocks',
+      'capability' => 'edit_posts',
+      'redirect' => true
+    ));
+
+
+    acf_add_options_sub_page(array(
+      'page_title' => 'Header',
+      'menu_title' => 'Header',
+      'parent_slug' => 'blocks',
+    ));
+
+    acf_add_options_sub_page(array(
+      'page_title' => 'Footer',
+      'menu_title' => 'Footer',
+      'parent_slug' => 'blocks',
+    ));
+    
+    acf_add_options_sub_page(array(
+      'page_title' => 'Cookies',
+      'menu_title' => 'Cookies',
+      'parent_slug' => 'blocks',
+    ));
+
+    acf_add_options_sub_page(array(
+      'page_title' => 'About',
+      'menu_title' => 'About',
+      'parent_slug' => 'blocks',
+    ));
+    
+
   }
 }
 
