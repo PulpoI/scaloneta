@@ -126,9 +126,9 @@ if(!function_exists('a_custom_navigation_menus')) {
 
 if(!function_exists('a_register_custom_post_types')) {
   function a_register_custom_post_types() {
-    $singular_name = __('Project', 'scaloneta');
-    $plural_name = __('Projects', 'scaloneta');
-    $slug_name = 'cpt-project';
+    $singular_name = __('Partido', 'scaloneta');
+    $plural_name = __('Partidos', 'scaloneta');
+    $slug_name = 'cpt-partidos';
   
 
     register_post_type( $slug_name, array(
