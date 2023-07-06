@@ -124,86 +124,86 @@ if(!function_exists('a_custom_navigation_menus')) {
   add_action( 'init', 'a_custom_navigation_menus');
 }
 
-if(!function_exists('a_register_custom_post_types')) {
-  function a_register_custom_post_types() {
-    $singular_name = __('Partido', 'scaloneta');
-    $plural_name = __('Partidos', 'scaloneta');
-    $slug_name = 'partidos';
-    register_post_type( $slug_name, array(
-      'label' => $singular_name,
-      'public' => true,
-      'capability_type' => 'post',
-      'map_meta_cap' => true,
-      'has_archive' => false,
-      'query_var' => $slug_name,
-      'supports' => array('title', 'thumbnail', 'revisions'),
-      'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
-      'menu_icon' => 'dashicons-images-alt2',
-      'show_in_rest' => true
-    ));
-    $singular_name = __('Rival', 'scaloneta');
-    $plural_name = __('Rivales', 'scaloneta');
-    $slug_name = 'rivales';
-    register_post_type( $slug_name, array(
-      'label' => $singular_name,
-      'public' => true,
-      'capability_type' => 'post',
-      'map_meta_cap' => true,
-      'has_archive' => false,
-      'query_var' => $slug_name,
-      'supports' => array('title', 'thumbnail', 'revisions'),
-      'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
-      'menu_icon' => 'dashicons-images-alt2',
-      'show_in_rest' => true
-    ));
-    $singular_name = __('Instancia', 'scaloneta');
-    $plural_name = __('Instancias', 'scaloneta');
-    $slug_name = 'instancias';
-    register_post_type( $slug_name, array(
-      'label' => $singular_name,
-      'public' => true,
-      'capability_type' => 'post',
-      'map_meta_cap' => true,
-      'has_archive' => false,
-      'query_var' => $slug_name,
-      'supports' => array('title', 'thumbnail', 'revisions'),
-      'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
-      'menu_icon' => 'dashicons-images-alt2',
-      'show_in_rest' => true
-    ));
-    $singular_name = __('Estadio', 'scaloneta');
-    $plural_name = __('Estadios', 'scaloneta');
-    $slug_name = 'estadios';
-    register_post_type( $slug_name, array(
-      'label' => $singular_name,
-      'public' => true,
-      'capability_type' => 'post',
-      'map_meta_cap' => true,
-      'has_archive' => false,
-      'query_var' => $slug_name,
-      'supports' => array('title', 'thumbnail', 'revisions'),
-      'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
-      'menu_icon' => 'dashicons-images-alt2',
-      'show_in_rest' => true
-    ));
-    $singular_name = __('Formacion', 'scaloneta');
-    $plural_name = __('Formaciones', 'scaloneta');
-    $slug_name = 'formaciones';
-    register_post_type( $slug_name, array(
-      'label' => $singular_name,
-      'public' => true,
-      'capability_type' => 'post',
-      'map_meta_cap' => true,
-      'has_archive' => false,
-      'query_var' => $slug_name,
-      'supports' => array('title', 'thumbnail', 'revisions'),
-      'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
-      'menu_icon' => 'dashicons-images-alt2',
-      'show_in_rest' => true
-    ));
-  }
-  add_action( 'init', 'a_register_custom_post_types');
-}
+// if(!function_exists('a_register_custom_post_types')) {
+//   function a_register_custom_post_types() {
+//     $singular_name = __('Partido', 'scaloneta');
+//     $plural_name = __('Partidos', 'scaloneta');
+//     $slug_name = 'partidos';
+//     register_post_type( $slug_name, array(
+//       'label' => $singular_name,
+//       'public' => true,
+//       'capability_type' => 'post',
+//       'map_meta_cap' => true,
+//       'has_archive' => false,
+//       'query_var' => $slug_name,
+//       'supports' => array('title', 'thumbnail', 'revisions'),
+//       'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
+//       'menu_icon' => 'dashicons-images-alt2',
+//       'show_in_rest' => true
+//     ));
+//     $singular_name = __('Rival', 'scaloneta');
+//     $plural_name = __('Rivales', 'scaloneta');
+//     $slug_name = 'rivales';
+//     register_post_type( $slug_name, array(
+//       'label' => $singular_name,
+//       'public' => true,
+//       'capability_type' => 'post',
+//       'map_meta_cap' => true,
+//       'has_archive' => false,
+//       'query_var' => $slug_name,
+//       'supports' => array('title', 'thumbnail', 'revisions'),
+//       'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
+//       'menu_icon' => 'dashicons-images-alt2',
+//       'show_in_rest' => true
+//     ));
+//     $singular_name = __('Instancia', 'scaloneta');
+//     $plural_name = __('Instancias', 'scaloneta');
+//     $slug_name = 'instancias';
+//     register_post_type( $slug_name, array(
+//       'label' => $singular_name,
+//       'public' => true,
+//       'capability_type' => 'post',
+//       'map_meta_cap' => true,
+//       'has_archive' => false,
+//       'query_var' => $slug_name,
+//       'supports' => array('title', 'thumbnail', 'revisions'),
+//       'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
+//       'menu_icon' => 'dashicons-images-alt2',
+//       'show_in_rest' => true
+//     ));
+//     $singular_name = __('Estadio', 'scaloneta');
+//     $plural_name = __('Estadios', 'scaloneta');
+//     $slug_name = 'estadios';
+//     register_post_type( $slug_name, array(
+//       'label' => $singular_name,
+//       'public' => true,
+//       'capability_type' => 'post',
+//       'map_meta_cap' => true,
+//       'has_archive' => false,
+//       'query_var' => $slug_name,
+//       'supports' => array('title', 'thumbnail', 'revisions'),
+//       'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
+//       'menu_icon' => 'dashicons-images-alt2',
+//       'show_in_rest' => true
+//     ));
+//     $singular_name = __('Formacion', 'scaloneta');
+//     $plural_name = __('Formaciones', 'scaloneta');
+//     $slug_name = 'formaciones';
+//     register_post_type( $slug_name, array(
+//       'label' => $singular_name,
+//       'public' => true,
+//       'capability_type' => 'post',
+//       'map_meta_cap' => true,
+//       'has_archive' => false,
+//       'query_var' => $slug_name,
+//       'supports' => array('title', 'thumbnail', 'revisions'),
+//       'labels' => a_get_custom_post_type_labels($singular_name, $plural_name),
+//       'menu_icon' => 'dashicons-images-alt2',
+//       'show_in_rest' => true
+//     ));
+//   }
+//   add_action( 'init', 'a_register_custom_post_types');
+// }
 
 if(!function_exists('a_get_custom_post_type_labels')) {
   function a_get_custom_post_type_labels($singular, $plural) {

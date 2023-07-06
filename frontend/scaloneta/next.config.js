@@ -6,7 +6,7 @@ const nextConfig = {
     appDir: true,
   },
   env: {
-    API_URL: "https://scaloneta.pulpol.com.ar/wp-json/wp/v2",
+    API_URL: "https://scaloneta.pulpol.com.ar/wp-json/acf/v3",
   },
 };
 

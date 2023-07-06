@@ -1,1 +1,1 @@
-export * from './partidos.service';
+export * from './partido.service';

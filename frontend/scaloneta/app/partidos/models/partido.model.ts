@@ -1,42 +1,57 @@
 export interface Partido {
   id: number;
-  date: string;
-  date_gmt: string;
-  guid: Guid;
-  modified: string;
-  modified_gmt: string;
-  slug: string;
-  status: string;
-  type: string;
-  link: string;
-  title: Guid;
-  featured_media: number;
-  template: string;
-  acf: Acf;
+  acf: PartidoAcf;
 }
 
-interface Acf {
+export interface PartidoAcf {
+  rival: Rival;
+  fecha_y_hora: string;
+  arg: Arg;
+  resultado: Resultado;
+  instancia: Instancia[];
+  estadio: Estadio[];
+  formacion: number[];
   video_main: string;
-  imagen: string;
-  resultado: string;
-  fecha: string;
-  hora_argentina: string;
-  hora_qatar: string;
-  goles: Gole[];
-  video_resumen: string;
-  galeria_de_fotos: number[];
-  instancia: number[];
-  rival: number[];
-  estadio: number[];
+  imagen_main: string;
+  galeria: string[];
 }
 
-interface Gole {
-  nombre_jugador: string;
+interface Instancia {
+  term_id: number;
+  name: string;
+  slug: string;
+}
+
+interface Estadio {
+  term_id: number;
+  name: string;
+  slug: string;
+}
+
+interface Resultado {
+  goles_de_arg: Golesdearg[];
+  goles_de_rival: Golesderival[];
+}
+
+interface Golesderival {
+  jugador: string;
   minuto: string;
-  gol_de_penal: boolean;
-  video_de_gol: string;
+  penal: boolean;
 }
 
-interface Guid {
-  rendered: string;
+interface Golesdearg {
+  jugador: number[];
+  minuto: string;
+  penal: boolean;
+}
+
+interface Arg {
+  nombre: string;
+  bandera: string;
+}
+
+interface Rival {
+  nombre: string;
+  bandera: string;
+  rival_id: number[];
 }
